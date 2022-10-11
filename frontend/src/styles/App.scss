@@ -1,0 +1,38 @@
+
+$black: #333333;
+$grey80: #535353;
+$grey50: #7d7d7d;
+$grey30: #a3a3a3;
+$red: #fd4e5f;
+$red50: #fd4e5f50;
+$red16: #fd4e5f16;
+$yellow: #fec802;
+$yellow50: #fec80250;
+$yellow16: #fec80216;
+$sky: #6694cc;
+$sky50: #B2C9E5;
+$sky16: #6694cc16;
+$purple: #bca7f3;
+$purple16: #bca7f316;
+$purple50: #bca7f350;
+
+@font-face {
+  font-family: 'Aggro';
+  src: url('../assets/fonts/SB 어그로 L.ttf');
+}
+
+* {
+  font-family: 'Aggro',source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+
+@import '~bootstrap/scss/bootstrap';
+@import './Main';
+@import './Header';
+@import './Login';
+@import './Store';
+@import './Recommend';
+@import './Mapdefault';
+@import './Bookmark';
+@import './Search';

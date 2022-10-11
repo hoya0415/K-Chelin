@@ -1,0 +1,163 @@
+.map_wrap {
+  position: relative;
+}
+
+.list_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 130px;
+  margin: 5px 0 30px 5px;
+  // padding:5px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.infront {
+  position: absolute;
+  z-index: 1;
+}
+.customoverlay {
+  position: relative;
+  bottom: 45px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ddd;
+  float: left;
+}
+
+.customoverlay:nth-of-type(n) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+
+.customoverlay a {
+  text-decoration: none;
+}
+.customoverlay .title {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  padding: 4px 8px;
+  font-size: 5px;
+  font-weight: bold;
+  border-radius: 6px;
+  overflow: hidden;
+  color: #d95050;
+}
+.customoverlay:after {
+  content: '';
+  position: absolute;
+  margin-left: -15px;
+  left: 50%;
+  bottom: -12px;
+  width: 22px;
+  height: 12px;
+  size: 10%;
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
+}
+// ==========================================> MapSearch
+.map-top-con {
+  display: flex;
+  padding: 30px 20px;
+  z-index: 800;
+  align-items: flex-end;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  .map-search-bar {
+    width: 100%;
+    .MuiTextField-root {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0px 0px 15px #0000004f;
+      input {
+        font-family: 'Aggro';
+      }
+      .MuiOutlinedInput-notchedOutline {
+        border: none;
+      }
+    }
+  }
+  .map-btn-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+.map-btn {
+  margin-top: 10px;
+  margin-left: 15px;
+  box-shadow: 0px 0px 15px #0000004f;
+  border-radius: 15px;
+  border: none;
+  background-color: #fff;
+  width: 65px;
+  cursor: pointer;
+  padding: 6px 2px;
+  text-align: center;
+}
+.map-icon {
+  width: auto;
+  height: 25px;
+  transition: transform 300ms ease;
+  &:hover {
+    transform: scale(1.2);
+  }
+  z-index: 10;
+}
+.map-text {
+  color: $grey50;
+  font-size: 11px;
+}
+
+#map-offcanvas {
+  height: 280px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0px 0px 15px #0000004f;
+}
+
+.map-store-container {
+  display: flex;
+  white-space: nowrap;
+  overflow: auto;
+
+  .map-store {
+    position: relative;
+    margin-right: 10px;
+  }
+}
+
+.map-search-list-backdrop {
+  height: 30vh;
+  bottom: 0;
+  top: auto;
+  position: fixed;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+#map-searh-result-con {
+  background: none;
+  border: none;
+  height: 250px;
+}
+#map-searh-result-body {
+  padding: 0;
+}
+#map-searh-result-header {
+  justify-content: center;
+  button {
+    opacity: 1;
+  }
+}

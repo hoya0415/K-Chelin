@@ -1,0 +1,122 @@
+// ==========================================> MainSearch
+
+.main-search-input {
+  width: 100%;
+  min-width: 270px;
+  input {
+    font-family: 'Aggro';
+    font-size: 13px;
+  }
+  .MuiOutlinedInput-root {
+    z-index: 150;
+    box-shadow: 0 0 15px #0000003c;
+    border-radius: 12px;
+    background-color: #ffffff;
+    &:hover {
+      .MuiOutlinedInput-notchedOutline {
+        border: none;
+      }
+    }
+    .MuiOutlinedInput-notchedOutline {
+      border: none;
+    }
+  }
+  .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: none;
+  }
+}
+
+.search-reset-btn {
+  cursor: pointer;
+  width: 1.5em;
+  opacity: 0.5;
+  transform: rotate(0.125turn);
+}
+
+.search {
+  background-color: $purple;
+}
+.trend-css-baseline {
+  height: 90px;
+}
+
+// 자동완성
+.main-search-container {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 25px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 0 15px #0000003c;
+  .search-autocomplete {
+    vertical-align: middle;
+    font-size: 13px;
+    margin: 9px auto;
+    border-bottom: 1px solid #eceaea;
+    cursor: pointer;
+    &:hover {
+      font-weight: bold;
+      color: $sky;
+      background-color: $sky16;
+    }
+  }
+}
+
+// ==========================================> SearchResult
+.search-box {
+  padding: 30px 20px 25px;
+}
+
+.search-result-container {
+  height: calc(100vh - 110px);
+  .search-tabs {
+    justify-content: space-around;
+    margin-top: 20px;
+    border-bottom-color: $purple;
+    .nav-link {
+      color: $grey80;
+      font-size: 14px;
+      width: calc(100vw / 2);
+      &:hover {
+        background-color: $purple16;
+        border-radius: 9px 9px 0 0;
+        font-weight: bold;
+        border-color: $purple;
+      }
+    }
+    .nav-link.active {
+      background-color: $purple16;
+      border-color: $purple $purple #f7f5fe $purple;
+      border-radius: 9px 9px 0 0;
+      font-weight: bold;
+    }
+  }
+  .search-result-artist {
+    padding-top: 0.05px;
+    background-color: $purple16;
+    min-height: calc(100vh - 150px);
+    .MuiCircularProgress-root {
+      color: $grey30;
+      display: block;
+      margin: 10em auto;
+    }
+  }
+  .tab-content {
+    padding-top: 1px;
+  }
+  .search-none {
+    height: 100%;
+    margin: 10em auto;
+    text-align: center;
+    color: $grey80;
+  }
+}
+.button-position {
+  display: flex;
+  justify-content: center;
+  button {
+    font-family: 'Aggro';
+    &:hover {
+      background-color: $red16;
+    }
+  }
+}

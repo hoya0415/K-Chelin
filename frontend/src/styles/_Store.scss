@@ -1,0 +1,464 @@
+// ==========================================> 상세 페이지
+
+.store-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 25px;
+  h2 {
+    color: $black;
+    font-size: 22px;
+    margin: 0;
+    font-weight: bold;
+  }
+  h4 {
+    margin: 0;
+    color: $grey30;
+    font-size: 12px;
+  }
+  .store-fork {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    min-width: 56px;
+    h5 {
+      margin: 0;
+      color: $grey30;
+      font-size: 12px;
+    }
+  }
+}
+
+.store-thumb {
+  width: 320px;
+  height: 320px;
+  margin: auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}
+.store-tab-con {
+  .store-tabs {
+    justify-content: space-around;
+    margin-top: 20px;
+    border-bottom-color: $yellow;
+    .nav-link {
+      color: $grey80;
+      font-size: 14px;
+      width: calc(100vw / 3);
+      &:hover {
+        background-color: $yellow16;
+        border-color: $yellow;
+        border-radius: 9px 9px 0 0;
+        font-weight: bold;
+      }
+    }
+    .nav-link.active {
+      background-color: $yellow16;
+      border-color: $yellow $yellow #fdf8e6 $yellow;
+      border-radius: 9px 9px 0 0;
+      font-weight: bold;
+    }
+  }
+  .tab-content {
+    background-color: $yellow16;
+    min-height: calc(100vh - 450px);
+    height: 100%;
+  }
+}
+.header-btn {
+  padding: 0;
+  svg {
+    width: 30px;
+  }
+  button {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+.back-btn {
+  color: $grey30;
+}
+// ==========================================> 정보 탭
+.store-info-container {
+  padding: 30px;
+  color: $black;
+  font-size: 13px;
+  img {
+    width: 13px;
+    opacity: 0.7;
+    margin-right: 5px;
+  }
+  .store-info-address {
+    margin-bottom: 10px;
+    h4 {
+      font-size: 13px;
+      display: inline;
+      font-weight: 600;
+    }
+    .store-info-map {
+      margin: 10px 0;
+      #kakao-map-container {
+        border-radius: 15px;
+        border: 1px solid $yellow;
+      }
+    }
+  }
+  .store-info-tel {
+    margin: 20px 0;
+
+    h5 {
+      display: inline;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+  .accordion-body {
+    padding: 0;
+  }
+  .accordion-item {
+    background-color: transparent;
+  }
+  .accordion-button {
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 0;
+    &:not(.collapsed) {
+      color: $black;
+      padding: 10px 0;
+      background-color: transparent;
+      box-shadow: none;
+      &::after {
+        background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23212529%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e');
+      }
+    }
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// ==========================================> 리뷰 탭
+
+// 트위터 최소 가로 길이가 250px이고 글씨크기나 해상도 조절도 안 되고 말줄임표도 안 돼서 가로를 줄이면 세로로 엄청 늘어나고 개노답임 ㅠ
+.store-review-container {
+  display: flex;
+  white-space: nowrap;
+  overflow: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .twitter-tweet {
+    margin-left: 20px;
+    width: 280px !important;
+  }
+}
+
+// ==========================================> 비슷한 식당 탭
+
+.similar-container {
+  padding: 20px 30px 50px 30px;
+  button {
+    display: block;
+    margin: 0 auto;
+    background-color: $yellow;
+    border: transparent;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    &:hover {
+      background-color: $yellow;
+      border-color: $yellow;
+    }
+    &:focus {
+      background-color: $yellow;
+      border-color: $yellow;
+      box-shadow: 0 0 0 0.25rem $yellow16;
+    }
+    &:active:focus {
+      box-shadow: 0 0 0 0.25rem #fec70260;
+    }
+  }
+  .col-6 {
+    padding: 0 10px;
+    margin-top: 30px;
+  }
+}
+
+// ==========================================> 정사각 미리보기 컴포넌트
+
+.store-item {
+  position: relative;
+  margin: auto;
+  box-shadow: 5px 5px 10px #00000029;
+  border-radius: 15px;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+  .store-item-info {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.345) 100%
+    );
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    border-radius: 15px;
+    color: #ffffff;
+    h4 {
+      width: 90%;
+      position: absolute;
+      bottom: 0;
+      left: 0.5rem;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: auto;
+      text-overflow: ellipsis;
+    }
+    h5 {
+      position: absolute;
+      bottom: 0;
+      left: 0.5rem;
+      margin-bottom: 7px;
+      font-size: 9px;
+    }
+  }
+}
+
+// ==========================================> 직사각(리스트용) 미리보기 컴포넌트
+
+.store-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  margin: 30px 10px;
+  padding: 10px;
+  border-radius: 12px;
+  .store-list-item-img {
+    position: absolute;
+    top: -1rem;
+    left: 0.5rem;
+    padding: 0;
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50px;
+    }
+  }
+
+  h5 {
+    margin-left: 5px;
+    font-size: 9px;
+    margin-bottom: 5px;
+    color: $grey30;
+  }
+  .store-list-item-info {
+    padding: 0;
+    margin: 0 0 0 10px;
+    .store-list-item-info-name-con {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      cursor: pointer;
+      h4 {
+        font-size: 13px;
+        font-weight: bold;
+        margin-left: 5px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+      h5 {
+        margin-bottom: 0;
+      }
+    }
+    .store-list-item-info-text-con {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 10px;
+        height: 10px;
+        opacity: 0.6;
+      }
+      h5 {
+        display: inline;
+        vertical-align: middle;
+        margin: 0 0 0 2px;
+      }
+    }
+  }
+  .store-list-item-tag-container {
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+    overflow: auto;
+    margin-left: 3px;
+    .store-list-item-tag {
+      display: inline;
+      background-color: $purple;
+      border-radius: 4px;
+      font-size: 6.5px;
+      padding: 0.5px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .nct {
+      display: inline;
+      background-color: #bbe309;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .theboys {
+      display: inline;
+      background-color: #d11416;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .blackpink {
+      display: inline;
+      background-color: #f7a7bb;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .bts {
+      display: inline;
+      background-color: #a020f0;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .seventeen {
+      display: inline;
+      background-color: #92a8d1;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .monstax {
+      display: inline;
+      background-color: #288ba0;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .exo {
+      display: inline;
+      background-color: #a8a8a8;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .mh {
+      display: inline;
+      background-color: #e31779;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+    .woodz {
+      display: inline;
+      background-color: #e31779;
+      border-radius: 4px;
+      font-size: 6px;
+      padding: 1px 3px;
+      color: #fff;
+      font-weight: bold;
+      margin: 0 3px;
+    }
+  }
+
+  .store-list-item-book {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .book-btn {
+      h5 {
+        margin: 0;
+        text-align: center;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+// ==========================================> 페이지네이션
+.pagination-con {
+  display: flex;
+  justify-content: center;
+}
+.pagination {
+  padding-bottom: 80px;
+  li {
+    margin: auto 5px;
+    border-radius: 50px;
+    text-align: center;
+    min-width: 25px;
+    a {
+      text-decoration: none;
+      color: $grey30;
+      font-size: 13px;
+      cursor: pointer;
+      padding: 8px;
+      font-weight: bold;
+    }
+    &.active {
+      background-color: $red50;
+    }
+    &:hover {
+      background-color: $red50;
+    }
+  }
+}

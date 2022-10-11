@@ -1,0 +1,149 @@
+#Account {
+  background: $sky50;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.cover-logo {
+  width: 280px;
+  position: absolute;
+  top: calc(50% - 140px);
+  left: calc(50% - 140px);
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.account-wrap {
+  position: absolute;
+  min-height: 590px;
+  top: calc(50% - 300px);
+  left: calc(50% - 160px);
+  width: 320px;
+  padding: 30px;
+  border-radius: 40px;
+  background: white;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.19),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  .account-logo {
+    margin: 0 auto 30px;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: #B2C9E5;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      // border-radius: 20px;
+    }
+  }
+  .input-fld {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    .MuiTextField-root {
+      margin-top: 10px;
+      width: 100%;
+    }
+    /* border color  */
+    .MuiOutlinedInput-root {
+      &:hover {
+        .MuiOutlinedInput-notchedOutline {
+          border: 1.5px solid rgb(216, 224, 228) ;
+          border-radius: 12px;
+        }
+      }
+      .MuiOutlinedInput-notchedOutline {
+        border: 1.5px solid rgb(216, 224, 228) ;
+        border-radius: 12px;
+      }
+    }
+    
+    /* input color */
+    #input {
+      color: $grey30;
+      font-size: 15px;
+      position: static;
+      vertical-align: middle;
+      padding-right: 25%;
+      font-family: 'Aggro';
+    }
+    .MuiInputLabel-root {
+      font-family: 'Aggro';
+      font-size: 13px;
+      color: $grey30;
+      height: auto;
+      font-weight: bold;
+      line-height: 2;
+    }
+    /* input box 상단 이메일 글자 색 변경 */
+    #input-label {
+      color: #779cce;
+    }
+  }
+
+  /* 이메일 형식 에러 메시지 */
+  .err-msg {
+    font-size: 10px;
+    color: #df6b6f;
+    text-align: right;
+    width: 220px;
+    padding: 3px 0 0 0 ;
+  }
+
+  // 버튼
+  .submit-btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    margin: 25px auto 0 auto;
+    font-size: 15px;
+    display: block;
+    font-weight: 800;
+  }
+
+  .hr {
+    height: 1.5px;
+    margin-top: 35px;
+    background: rgba(170, 170, 170, 0.2);
+    display: block;
+  }
+  // 계정이 없으신가요
+  .move-to-fld {
+    margin: 10px auto 0 auto;
+    text-align: center;
+    span {
+      color: $grey50;
+      font-size: 14px;
+    }
+    .move-to {
+      color: $sky;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 17px;
+    }
+  }
+}
+.modal-box {
+  &:focus-visible {
+    outline: none;
+  }
+}
+#modal-modal-title {
+  font-size: 20px;
+  text-align: center;
+  color: $black;
+  font-weight: bold;
+}
+#modal-modal-description {
+  font-size: 15px;
+  color: $black;
+}

@@ -1,0 +1,340 @@
+.bmark-container {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.bmark-pgname {
+  margin: 20px 10px;
+}
+.bmark-add {
+  margin: 20px 30px;
+  .MuiButton-root {
+    font-family: 'Aggro';
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+}
+.bmark-item-img {
+  // margin-top:10px;
+  height: 100px;
+  width: 100px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+//------------------------------------------------------> bmark card
+.bmark-cardcontainer {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.bmark-card {
+  width: 300px;
+  .MuiCardContent-root {
+    // height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:last-child {
+      padding: 0;
+    }
+    
+  }
+  .MuiTypography-root {
+    font-family: 'Aggro';
+    text-align: center;
+    // font-size: 15px;
+    margin-bottom: 0rem;
+    padding: 0;
+  }
+}
+.card-icon {
+  .MuiSvgIcon-root {
+    height: 20px;
+    width: 20px;
+  }
+}
+.bmark-card-text-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .bmark-card-text {
+    display: flex;
+    justify-content: space-between;
+    
+    .bmark-card-title {
+      border: none;
+      font-size: 18px;
+      display: inline;
+      text-align: start;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 70%;
+    }
+  }
+  .bmark-card-text-btn {
+    background-color: beige;
+    border: none;
+  }
+  .bmark-count {
+    font-size: 13px;
+    color: grey;
+    text-align: start;
+  }
+}
+.bmark-drop {
+  .dropdown-toggle {
+    &::before {
+      display: none;
+    }
+  }
+}
+.bmark-count-m {
+  margin-right: 5px;
+}
+
+// ----------------------------------------------------> modal
+.modal-open-btn {
+  background-color: #fd4e5f;
+  border: none;
+  color: white;
+  margin-bottom: 15px;
+  box-shadow : 3px 3px 3px #f39ba4;
+  text-decoration: none;
+  &:active { 
+    background-color: #fd4e5f;
+    border-color: none;
+  }
+  &:focus { 
+    background-color: #fd4e5f;
+    border-color: none;
+    box-shadow: 3px 3px 3px #f39ba4;
+  }
+  cursor: pointer;
+  img {
+    opacity: 0.8;
+    
+  }
+}
+
+.modal-title {
+  text-align: center;
+}
+.add-input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc;
+}
+.modal-footer {
+  display: inline;
+  text-align: center;
+}
+.add-btn {
+  background-color: #fd4e5f;
+  box-shadow : 3px 3px 3px #f39ba4;
+  color: white;
+  border: none;
+  &:active { 
+    background-color: #fd4e5f;
+    border-color: none;
+  }
+  &:focus { 
+    background-color: #fd4e5f;
+    border-color: none;
+    box-shadow: 3px 3px 3px #f39ba4;
+  }
+  &:disabled {
+    background-color: grey;
+    box-shadow: 3px 3px 3px rgb(49, 49, 49);
+  }
+}
+// ------------------------------------------> list 담기 modal
+.add-new-list-btn-div {
+  text-align: center;
+
+  .add-new-list-btn {
+    margin-top: 15px;
+    color: black;
+    .accordion-button {
+      font-size: 14px;
+      display: block;
+      text-align: center;
+      &:not(.collapsed) {
+        background-color: rgb(255, 255, 255);
+        color: rgba(0, 0, 0, 0.866);
+        box-shadow: none;
+      }
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+      &::after {
+        background: none !important;
+      }
+    }
+    img {
+      width: 20px;
+      opacity: 0.8;
+      margin: 0 5px;
+    }
+  }
+  .accordion-body {
+    display: flex;
+    justify-content: space-between;
+    input {
+      font-size: 13px;
+      width: 80%;
+    }
+    .add-btn {
+      font-size: 13px;
+    }
+  }
+}
+.book-modal {
+  position: relative;
+  cursor: pointer;
+}
+.add-list {
+  z-index: 1300;
+  max-height: 530px;
+  width: 90vw;
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .modal-body {
+    form {
+      overflow: scroll;
+      height: 200px;
+      font-size: 14px;
+      .form-check {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+.add-modal-create {
+  height: 400px;
+  z-index: 999;
+  .modal-dialog {
+    height: 390px;
+  }
+  .modal-content {
+    height: 390px;
+  }
+}
+.modal-backdrop {
+  z-index: 1049;
+}
+
+.list-option {
+  font-family: 'Aggro';
+  overflow: visible;
+}
+.card-icon {
+  overflow: visible;
+
+}
+.add-checkbox{
+  .form-check-input{
+    &:checked{
+      background-color: #fd4e5f;
+      border-color: #f39ba4;
+    }
+  }
+
+}
+
+// --------------------------------------------> 북마크
+.list-header {
+  display: flex;
+  // justify-content: space-evenly;
+}
+.list-name{
+  text-align: center;
+  width:100%;
+  margin-top: 10px;
+  font-size:20px;
+
+}
+
+//------------------------------------------------------> BmarkListDetail
+.detail-header-icon{
+  .MuiSvgIcon-root{
+    height: 35px;
+    width: 35px;
+    color: grey;
+  }
+}
+.bmark-detail-title{
+  border: none;
+  width: 180px;
+  text-align: center;
+}
+.bmark-detail-update-btn{
+  background-color: #fd4e5f;
+  border: none;
+  color: white;
+  box-shadow : 3px 3px 3px #f39ba4;
+  border-radius: 4px;
+}
+//--------------------------------------> 삭제 확인 모달
+.delete-btns{
+  text-align: center;
+}
+.delete-btn{
+  .css-1w1rijm-MuiButtonBase-root-MuiButton-root{
+    font-family: 'Aggro' !important;
+  }
+  .MuiButton-root{
+    font-family: 'Aggro';
+    border-color: white;
+  }
+  margin-right: 7px;
+}
+
+.delete-cancel-btn {
+  font-family: 'Aggro';
+  color: grey;
+  background-color: white !important;
+  border-color: grey;
+  .btn-primary{
+    
+  }
+}
+//-----------------------------------------> BmarkMinus
+.book-minus-btn{
+  height: 20px;
+  width: 20px;
+}
+.forkminus-img{
+  height: 20px;
+  width: 20px;
+}
+.book-minus-btns{
+  text-align: center;
+}
+.book-delete-btn{
+  font-family: 'Aggro' !important;
+  .css-1w1rijm-MuiButtonBase-root-MuiButton-root{
+    font-family: 'Aggro' !important;
+  }
+  .MuiButton-root{
+    font-family: 'Aggro' !important;
+    border-color: #fd4e5f
+  }
+}
+.book-delete-cancel-btn{
+  font-family: 'Aggro' !important;
+  color: grey;
+  background-color: white !important;
+  border-color: grey !important;
+  .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    color: black;
+  }
+}
